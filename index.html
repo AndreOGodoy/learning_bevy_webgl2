@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="index.css" rel="stylesheet">
+    <title>Bevy Wasm</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">
+	Bevy + WASM
+      </div>
+      <div id="wasm-view">
+	<canvas id="rust_wasm" tabindex="0" data-raw-handle="1" alt="bevy" cursor="auto" style="margin: auto"></canvas>
+	<script type="module">
+	  import init from "./pkg/bevy_wasm.js";
+	  init("./pkg/bevy_wasm_bg.wasm").then(function (wasm) {
+	      wasm.run();
+	  });
+	</script>
+
+      </div>
+    </div>
+  </body>
+</html>
