@@ -1,1 +1,35 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    widht: 100%;
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#header {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    
+    height: 10%;
+    width: 100%;
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    border-radius: 8px;
+}
+
+#wasm-view {
+    top: 10%;
+}
 

@@ -4,16 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    </style>    
     <link href="index.css" rel="stylesheet">
     <title>Bevy Wasm</title>
   </head>
   <body>
     <div id="main">
       <div id="header">
-	Bevy + WASM
+	Bevy WebGL2
       </div>
       <div id="wasm-view">
-	<canvas id="rust_wasm" tabindex="0" data-raw-handle="1" alt="bevy" cursor="auto" style="margin: auto"></canvas>
+	<canvas id="rust_wasm"></canvas>
 	<script type="module">
 	  import init from "./pkg/bevy_wasm.js";
 	  init("./pkg/bevy_wasm_bg.wasm").then(function (wasm) {
