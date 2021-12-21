@@ -9,19 +9,18 @@ extern {
 
 #[wasm_bindgen]
 pub fn run() {
-    let mut app = App::build()
+    let _app = App::build()
+	.insert_resource(WindowDescriptor {
+	    width: 800.0,
+	    height: 600.0,
+	    canvas: Some("#rust_wasm".to_string()),
+	    ..Default::default()
+	})
+	.insert_resource(ClearColor(Color::WHITE))
 	.add_plugins(DefaultPlugins)
 	.add_plugin(bevy_webgl2::WebGL2Plugin)
 	.add_startup_system(setup.system())
 	.add_system(animate_sprite_system.system())
-    
-	.insert_resource(WindowDescriptor {
-	    width: 800.0,
-	    height: 600.0,
-	    title: "Teste Testante".to_string(),
-	    canvas: Some("#rust_wasm".to_string()),
-	    ..Default::default()
-	})
 
 	.run();
 }
